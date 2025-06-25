@@ -109,15 +109,6 @@
 				speed: .25
 			});
 		
-		//**===================Odometer JS ===================**//
-		
-			$('.odometer').appear(function() {
-				var odo = $(".odometer");
-				odo.each(function() {
-					var countNumber = $(this).attr("data-count");
-					$(this).html(countNumber);
-				});
-			});
 		
 		//Mouse hover tile effect js//
 
