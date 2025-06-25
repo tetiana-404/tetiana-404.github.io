@@ -1,0 +1,266 @@
+@media only screen and (max-width : 2500px) {
+	.page-wrapper{
+		overflow:hidden;
+	}
+	
+}
+@media only screen and (max-width : 992px) {
+	.abh-header-area .abh-single-details h2 strong {
+		font-size: 60px;
+	}
+	.abh-single-details h2{
+		font-size:30px;
+	}
+	.abh-bg-home .abh-particle-img{
+		margin-left:-100px;
+	}
+	.abh-counter .abh-counter-icon{
+		margin: -50px auto 0px 0px;
+	}
+	.abh-single-blog .abh-blog-content p{
+		padding: 15px 5px 0px 0;
+	}
+	.abh-blog-content {
+		padding: 20px 0 4px;
+	}
+	.abh-main-testimonials.owl-theme .owl-dots, .owl-theme .owl-nav{
+		top: 210px;
+	}
+}
+@media only screen and (max-width : 991px) {
+	.abh-header-area .abh-single-details h2 strong {
+		font-size: 40px;
+		line-height:40px;
+		margin-left:4px;
+	}
+	.abh-default-img::before{
+		bottom: 0;
+		right: -39px;
+	}
+	
+	.abh-single-details h2{
+		font-size:25px;
+	}
+	.abh-banner-social ul li a{
+		margin: 0 10px 10px auto;
+	}
+	.abh-counter .abh-counter-icon{
+		margin: -50px auto 0px -17px;
+	}
+	.abh-counter-area{
+		top:-118px;
+	}
+	.abh-about-img{
+		margin-bottom:30px;
+	}
+	.abh-main-testimonials.owl-theme .owl-dots, .owl-theme .owl-nav {
+		top:210px;
+	}
+	.abh-blog-area .abh-single-blog{
+		margin-bottom:30px;
+	}
+	.abh-blog-btn .abh-themes-btn{
+		margin:15px 0;
+	}
+	.abh-blog-content {
+		padding: 20px 0 4px 23px;
+	}
+	.abh-hire-content h3{
+		text-align:center;
+	}
+	.abh-hire-area{
+		text-align:center;
+	}
+	.abh-hire-area .abh-themes-btn{
+		float:inherit;
+		margin:33px 0 0;
+	}
+	.abh-footer-boottom p{
+		text-align:center;
+	}
+	.abh-footer-area .abh-banner-social{
+		text-align:center;
+		padding-top:30px;
+	}
+	.abh-post-img{
+		float: inherit;
+		margin-right: 0px;
+	}
+	.abh-post-img img{
+		width:100%;
+	}
+	.abh-post-img1{
+		margin-bottom: 0 ! important;
+	}
+	.abh-hire-content p{
+		text-align:center;
+	}
+	.abh-border-right{
+		border-right:none;
+	}
+	.abh-hire-content{
+		margin-left:0;
+	}
+	
+}
+
+
+@media only screen and (max-width: 767px) {
+	.abh-home-area .abh_home_img2 img {
+		display:none;
+	}
+	.abh-default-img::before{
+		display:none;
+	}
+	.abh-bg-home .abh-particle-img {
+		margin-top: 0px;
+	}
+	.abh-bg-home .abh-particle-img img{
+		display:none;
+	}
+	.abh-video-img img{
+		display:none;
+	}
+	
+	.navbar-toggler{
+		margin-top:-5px;
+	}
+	.abh-section-title h2{
+		font-size:30px;
+	}
+	.abh-section-title p {
+		width: 100%;
+	}
+	.abh-counter-area {
+		top: 0;
+		padding: 90px 0;
+	}
+	.abh-bg-counter{
+		padding-top:50px! important;
+		border-radius:0;
+	}
+	#about .abh-about-content p{
+		padding-right: 0px;
+	}
+	#portfolio .abh-portfolio-nav .nav {
+		display: block;
+		text-align: center;
+	}
+	#portfolio .abh-portfolio-nav .nav li {
+		float: none;
+		display: inline-block;
+		padding: 5px 13px;
+		margin: 6px 12px;
+	}
+	#portfolio .abh-main-portfolio{
+		margin-left:1px;
+	}
+	.form-message{
+		padding-bottom:30px;
+	}
+	.abh-footer-boottom p{
+		text-align:center;
+	}
+	.abh-blog-content {
+		padding: 20px;
+	}
+	
+
+}
+
+@media only screen and (max-width: 576px) {
+	.navbar-toggler{
+		margin-top:-5px;
+	}
+	.abh-single-details h2{
+		font-size:28px;
+	}
+	.abh-section-title h2{
+		font-size:22px;
+	}
+	.abh-bg-counter{
+		padding-top:50px! important;
+	}
+	#about .about-content .about-single-content h2{
+		font-size:28px;
+	}
+	#portfolio .abh-portfolio-nav .nav {
+		display: block;
+		text-align: center;
+	}
+	#portfolio .abh-portfolio-nav .nav li {
+		float: none;
+		display: inline-block;
+		padding: 5px 13px;
+	}
+	#portfolio .abh-main-portfolio{
+		margin-left:1px;
+	}
+	.abh-blog-area .abh-single-blog img{
+		width:100%;
+	}
+	.abh-blog-content {
+		padding: 20px;
+	}
+	.abh-hire-content h3 {
+		font-size: 20px;
+	}
+	.abh-main-testimonials.owl-theme .owl-dots .owl-dot span{
+		display:none;
+	}
+	.abh-testimonial-inner .abh-testimonial-text{
+		padding:30px 0px;
+	}
+	.abh-single-counter {
+		box-shadow: 0 0 8px rgba(0,0,0,0.0), 0 0 0 10px rgba(255,255,255,0.0);
+		-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.0), 0 0 0 10px rgba(255,255,255,0.0);
+		padding:0px;
+	}
+	.abh-testimonial-item{
+		padding:30px;
+	}
+	.abh-contact-border{
+		padding:10px;
+	}
+
+}
+
+
+@media screen and (max-width: 320px) and (min-width: 0px){
+	.navbar-toggler{
+		margin-top:-5px;
+	}
+	.abh-header-area .abh-single-details h2 strong {
+		font-size: 30px;
+	}
+	.abh-single-details h2{
+		font-size:18px;
+	}
+	.abh-section-title h2{
+		font-size:22px;
+	}
+	.abh-banner-social{
+		text-align:center;
+	}
+	#home .abh-themes-btn{
+		margin-bottom:15px;
+	}
+	.abh-bg-counter{
+		padding-top:50px! important;
+	}
+	#about .about-content .about-single-content h2{
+		font-size:20px;
+	}
+	#portfolio .portfolio-list .nav li {
+		float: none;
+		display: inline-block;
+		padding: 7px 8px;
+	}
+	.abh-hire-content h3 {
+		font-size: 20px;
+	}
+	.abh-contact-border{
+		padding:10px;
+	}
+	
+}
