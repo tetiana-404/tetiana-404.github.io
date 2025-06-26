@@ -1254,7 +1254,7 @@ vertical-align: middle;
 	background: var(--thm-color);
 	transition: all 0.9s ease;
 }
-.abh-portfolio-icon i {
+.abh-portfolio-icon i, .abh-portfolio-icon a i {
 	border: 1px solid var(--thm-white);
 	color: var(--thm-white);
 	border-radius: 50%;

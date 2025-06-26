@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en-US" class=" js csstransforms3d csstransitions">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="Data Analysis, Python, Pandas, Data Cleaning, Visualization">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Data Analysis Project using Python and Pandas">
+    <title>Python - Product Data Analysis</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <button class="abh-scroll-top abh-back-to-top" data-targets="html">
+            <i class="fas fa-long-arrow-alt-up abh-scrollup-icon"></i>
+        </button>
+
+        <header>
+            <nav class="navbar navbar-navs navbar-expand-md fixed-top navbar-expend" id="menu-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index-basic.html">T.Semenchuk</a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                        <ul class="navbar-nav">
+                            <li class="menu-nav"><a class="nav-link page-scroll active" href="../index.html">Home</a>
+                            </li>
+                            <li class="menu-nav"><a class="nav-link page-scroll" href="../index.html#about">About</a>
+                            </li>
+                            <li class="menu-nav"><a class="nav-link page-scroll" href="../index.html#skills">Skills</a>
+                            </li>
+                            <li class="menu-nav"><a class="nav-link page-scroll"
+                                    href="../index.html#portfolio">Projects</a></li>
+                            <li class="menu-nav"><a class="nav-link page-scroll"
+                                    href="../index.html#testimonial">Feedback</a></li>
+                            <li class="menu-nav"><a class="nav-link page-scroll"
+                                    href="../index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <section id="about" class="abh-section-padding" style="margin-top: 100px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Data Analysis Project</h5>
+                            <h2>Product Data Cleaning and Visualization with Python & Pandas</h2>
+                            <p>This project demonstrates my ability to perform end-to-end data analysis using Python,
+                                Pandas, and Seaborn. The goal was to clean, transform, and visualize product data for
+                                business insights.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Brief -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Project Brief</h5>
+                            <p>This project involves loading, cleaning, visualizing, and analyzing product data from a
+                                CSV file <strong>
+                                    <a href="../docs/20240224.csv" target="_blank">20240224.csv</a></strong>. The goal
+                                is to uncover insights into product characteristics such as pricing, category, color,
+                                and production timelines.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objectives -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">🎯 Objectives</h5>
+                            <ul>
+                                <li>Load and inspect the dataset</li>
+                                <li>Clean missing or inconsistent data</li>
+                                <li>Check and enforce proper data types</li>
+                                <li>Perform basic exploratory data analysis</li>
+                                <li>Visualize insights using graphs</li>
+                                <li>Provide recommendations and document limitations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dataset Overview -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">📁 Dataset Overview</h5>
+                            <ul>
+                                <li>File: <strong><a href="../docs/20240224.csv"
+                                            target="_blank">20240224.csv</a></strong></li>
+                                <li>Columns: 41</li>
+                                <li>Records: 397</li>
+                                <li>Contains multilingual product descriptions, cost/pricing, dates, and category
+                                    details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dataset Structure -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">🧱 Dataset Structure</h5>
+
+                            <!-- Dataset Structure Table -->
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>Column Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ProductAlternateKey</td>
+                                            <td>Object</td>
+                                            <td>Alternative product identifier</td>
+                                        </tr>
+                                        <tr>
+                                            <td>WeightUnitMeasureCode</td>
+                                            <td>Categorical</td>
+                                            <td>Unit of measurement for weight</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SizeUnitMeasureCode</td>
+                                            <td>Categorical</td>
+                                            <td>Unit of measurement for size</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EnglishProductName</td>
+                                            <td>Object</td>
+                                            <td>Product name in English</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SpanishProductName</td>
+                                            <td>Object</td>
+                                            <td>Product name in Spanish</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FrenchProductName</td>
+                                            <td>Object</td>
+                                            <td>Product name in French</td>
+                                        </tr>
+                                        <tr>
+                                            <td>StandardCost</td>
+                                            <td>Float</td>
+                                            <td>Cost to manufacture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FinishedGoodsFlag</td>
+                                            <td>Boolean</td>
+                                            <td>Indicates if product is finished</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Color</td>
+                                            <td>Categorical</td>
+                                            <td>Product color</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SafetyStockLevel</td>
+                                            <td>Int</td>
+                                            <td>Minimum stock level before restocking</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ReorderPoint</td>
+                                            <td>Int</td>
+                                            <td>Stock level that triggers reorder</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ListPrice</td>
+                                            <td>Float</td>
+                                            <td>Product retail price</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Size</td>
+                                            <td>Object</td>
+                                            <td>Product size description</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SizeRange</td>
+                                            <td>Object</td>
+                                            <td>Range of available sizes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight</td>
+                                            <td>Float</td>
+                                            <td>Product weight</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DaysToManufacture</td>
+                                            <td>Int</td>
+                                            <td>Number of days to manufacture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ProductLine</td>
+                                            <td>Categorical</td>
+                                            <td>Product line or category</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DealerPrice</td>
+                                            <td>Float</td>
+                                            <td>Wholesale price</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Class</td>
+                                            <td>Categorical</td>
+                                            <td>Product classification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Style</td>
+                                            <td>Categorical</td>
+                                            <td>Product style</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ModelName</td>
+                                            <td>Object</td>
+                                            <td>Name of the product model</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EnglishDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in English</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FrenchDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in French</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ChineseDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Chinese</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ArabicDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Arabic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>HebrewDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Hebrew</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ThaiDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Thai</td>
+                                        </tr>
+                                        <tr>
+                                            <td>GermanDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in German</td>
+                                        </tr>
+                                        <tr>
+                                            <td>JapaneseDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Japanese</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TurkishDescription</td>
+                                            <td>Object</td>
+                                            <td>Description in Turkish</td>
+                                        </tr>
+                                        <tr>
+                                            <td>StartDate</td>
+                                            <td>Datetime</td>
+                                            <td>Date when product became available</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EndDate</td>
+                                            <td>Datetime</td>
+                                            <td>Date when product was discontinued (if any)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Status</td>
+                                            <td>Categorical</td>
+                                            <td>Product status (e.g., Active, Discontinued)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>EnglishProductSubcategoryName</td>
+                                            <td>Object</td>
+                                            <td>Subcategory name in English</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SpanishProductSubcategoryName</td>
+                                            <td>Object</td>
+                                            <td>Subcategory name in Spanish</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FrenchProductSubcategoryName</td>
+                                            <td>Object</td>
+                                            <td>Subcategory name in French</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Cleaning Process -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">🧼 Data Cleaning Process</h5>
+                            <ul>
+                                <li>🧹 Dropped 6 fully empty columns</li>
+                                <li>🔄 Replaced comma decimal separators and converted numeric fields to float</li>
+                                <li>Converted date columns to datetime format</li>
+                                <li>Converted categorical columns</li>
+                                <li>Filled missing categorical data with defaults</li>
+                                <li>🧮 Filled missing numeric data with column means</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exploratory Data Analysis -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">📈 Exploratory Data Analysis (EDA)</h5>
+                            <ul>
+                                <li>Generated descriptive statistics for numeric fields</li>
+                                <li>Created correlation heatmap to assess variable relationships</li>
+                                <li>Plotted histograms and boxplots (List Price, Standard Cost, Dealer Price, Weight)
+                                </li>
+                                <li>Visualized product characteristics like profit margins, status, and color
+                                    distribution</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Insights -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">💡 Key Insights</h5>
+                            <ul>
+                                <li>Significant gaps in weight data may affect shipping analytics</li>
+                                <li>Product pricing structures are consistent within subcategories</li>
+                                <li>Product Line M has highest profit margins, while Line T operates at a loss</li>
+                                <li>Identified outliers in pricing – potentially premium products</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">✅ Recommendations</h5>
+                            <ul>
+                                <li>Ensure weight data is consistently entered for logistics analysis</li>
+                                <li>Review duplicate SKU imports during data entry</li>
+                                <li>Investigate outlier pricing for possible adjustment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Limitations -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">⚠️ Limitations</h5>
+                            <ul>
+                                <li>No unique product IDs — duplicates were inferred</li>
+                                <li>Some missing values in key columns may skew analysis</li>
+                                <li>Currency for prices not specified — assumed consistent</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools and Libraries -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">📊 Tools & Libraries</h5>
+                            <ul>
+                                <li>Python</li>
+                                <li>Pandas</li>
+                                <li>Matplotlib</li>
+                                <li>Seaborn</li>
+                                <li>Jupyter Notebook</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Links -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">📥 Download Materials</h5>
+                            <a href="../docs/20240224.csv" download class="btn">
+                                <i class="fa fa-file-csv"></i> Download Raw Dataset (CSV)
+                            </a>
+                            <br><br>
+                            <a href="../docs/product_analysis.ipynb" download class="btn">
+                                <i class="fa fa-file-archive"></i> Download Python Project (PY)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Screenshot -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">📸 Sample Visualization</h5>
+                            <img src="../img/portfolio/project-1.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>🧠 <b>What the plot shows:</b> A histogram visualizing how product ListPrice values are
+                                distributed across the
+                                dataset.
+
+                                A KDE (Kernel Density Estimate) curve is overlaid to show the probability density —
+                                i.e., where prices are most
+                                concentrated.
+                                <br>
+                                🔍<b> Key Observations:</b>
+
+                                Right-skewed distribution:
+                                Most products have list prices clustered between 0 and 1,000.
+                                A long right tail suggests a smaller number of very high-priced products.
+                                Outliers:
+                                A few products far to the right may represent premium or specialized items.
+                                Worth reviewing if they align with pricing strategy and customer demand.
+                                💡 Insights & Recommendations:
+
+                                Consider binning prices into categories (e.g., budget, mid-range, premium) for further
+                                analysis.
+
+                                If outliers are confirmed to be niche products, ensure their marketing and positioning
+                                match their pricing.
+                            </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-2.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>
+                                Here is the analysis of the scatter plot titled "List Price vs Standard Cost by Product
+                                Line":
+                                <br><br>
+                                🧠 <b>What this graph shows:</b>
+
+                                X-axis: Standard Cost (how much the product costs to produce)
+                                Y-axis: List Price (how much the product is listed for sale)
+                                Colors: Different ProductLine categories (M, R, S, T)
+                                Each dot represents a product.
+                                <br>
+                                <br>
+                                <b>** 📊 Observations:**</b>
+
+                                Strong Positive Correlation Across all product lines, as Standard Cost increases, List
+                                Price increases. This
+                                shows consistent pricing strategy — higher-cost products are priced higher.
+
+                                Product Line M (blue):
+
+                                Concentrated at mid-to-high cost range.
+                                Most dots lie above the line of equality, suggesting higher markups.
+                                Indicates premium pricing — M products are more expensive and possibly higher margin.
+                                Product Line R (orange):
+                                Most frequent across the plot.
+                                Covers wide cost range — from very low-cost to high-cost products.
+                                Some high-cost products have relatively low markups, which may reduce profitability.
+                                Product Line S (green):
+                                Very few data points (low representation).
+                                Lies in the low-cost, low-price region.
+                                Suggests these are budget/low-tier products with limited margin or volume-focused.
+                                Product Line T (red):
+                                Also sparsely represented.
+                                Located in mid-cost range, but pricing is close to the standard cost.
+                                Suggests low profit margins, confirming the earlier boxplot insights.
+                                <br>
+                                <br>
+                                <b>📌 Insights & Recommendations:</b>
+
+                                Line M follows a strong value-based pricing model — likely high-end.
+                                Line R is diverse, but worth reviewing high-cost, low-margin items.
+                                Lines S and T have fewer entries and possibly tighter margins — consider repositioning
+                                or bundling strategies.
+                            </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-3.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>
+                                Here is the analysis of your boxplot titled "Profit Margin by Product Line", where
+                                profit margin is calculated as:
+                                <br><br>
+                                <b>DealerPrice - StandardCost</b>
+                                <br><br>
+                                <b>M</b>
+                                Highest profit margin overall.
+                                Median profit margin is significantly positive.
+                                <b>R</b>
+                                <br><br>
+                                Median is close to zero — profits are low or neutral on average.
+                                Many outliers below zero, indicating some products are sold at a loss.
+                                <b>S</b>
+                                <br><br>
+                                Narrow box → low variability in profit margins.
+                                Mostly positive profits, but small overall margins.
+                                <b>T</b>
+                                <br><br>
+                                Median profit is negative, meaning the typical product in this line sells at a loss.
+                                Many negative outliers, and only a few with any substantial margin.
+                                This is a potentially problematic line, needing pricing or cost review.
+                                <br><br>
+                                <b>📊 General Insights:</b>
+
+                                Line M stands out as the most profitable and variable.
+                                Line T may be underpriced or expensive to produce — a candidate for financial
+                                optimization.
+                                Lines R and S are marginally profitable or break-even but might still be strategic.
+                                <br><br>
+                                <b>✅ Recommendations:</b>
+
+                                Audit Product Line T — why are most products losing money?
+                                Consider promoting high-margin products from Line M.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="abh-footer-area">
+            <div class="container">
+                <div class="abh-footer-boottom text-center">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <p>©Copyright - All Right Reserved.
+                                Designed by <a href="#">Tetiana Semenchuk</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <div class="abh-banner-social mt-0">
+                                <ul class="abh-banner-icon list-unstyled">
+                                    <li class="linkedin"><a title="Linkedin" target="_blank"
+                                            href="https://www.linkedin.com/in/tetiana-semenchuk-481474161/"><i
+                                                class="fab fa-linkedin"></i></a></li>
+                                    <li class="github"><a title="Github" target="_blank"
+                                            href="https://github.com/tetiana-404"><i class="fab fa-github"></i></a></li>
+                                    <li class="whatsapp"><a title="Whatsapp" href="#"><i
+                                                class="fab fa-whatsapp"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script src="../js/typed.js"></script>
+    <script src="../js/imagesloaded.pkgd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="../js/jquery.counterup.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/odometer.min.js"></script>
+    <script src="../js/jquery.appear.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

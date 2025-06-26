@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="AWS, ETL, Lambda, DynamoDB, S3, Data Engineering">
+    <meta name="description" content="ETL Process in AWS using Lambda, S3 and DynamoDB">
+    <title>ETL Process in AWS</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+        <header>
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">T.Semenchuk</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDefault">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarDefault">
+                        <ul class="navbar-nav">
+                            <li><a class="nav-link" href="../index.html">Home</a></li>
+                            <li><a class="nav-link" href="../index.html#about">About</a></li>
+                            <li><a class="nav-link" href="../index.html#skills">Skills</a></li>
+                            <li><a class="nav-link" href="../index.html#portfolio">Projects</a></li>
+                            <li><a class="nav-link" href="../index.html#testimonial">Feedback</a></li>
+                            <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="about" class="abh-section-padding" style="margin-top: 100px;">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Cloud ETL Project</h5>
+                            <h2>ETL Process in AWS</h2>
+                            <p>This project demonstrates my ability to build an ETL (Extract-Transform-Load) process in the Amazon Web Services (AWS) environment using S3, AWS Lambda, and DynamoDB.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Project Brief</h5>
+                            <p>The goal was to process data from a JSON file containing information about the 100 best books in human history. The project involved cleaning, transforming, and loading the data into a DynamoDB table.</p>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">ETL Steps</h5>
+                            <ul>
+                                <li><strong>E - Extract:</strong> Loaded JSON files from AWS S3 bucket into AWS Lambda function.</li>
+                                <li><strong>T - Transform:</strong> Performed data cleaning, reordering columns, and language code conversion using Pandas inside Lambda.</li>
+                                <li><strong>L - Load:</strong> Loaded the transformed data into AWS DynamoDB table.</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">AWS Services Used</h5>
+                            <ul>
+                                <li>Amazon S3 (for data storage)</li>
+                                <li>AWS Lambda (for data processing)</li>
+                                <li>Amazon DynamoDB (for data storage)</li>
+                                <li>IAM Roles (for permissions)</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Python Libraries Used</h5>
+                            <ul>
+                                <li>Pandas</li>
+                                <li>JSON</li>
+                                <li>Boto3 (AWS SDK for Python)</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Dataset Overview</h5>
+                            <p>Original file: <strong><a target="_blank" href="../docs/100_best_books.json">
+                                100_best_books.json
+                            </a></strong></p>
+                            <p>Dataset contained the following fields:</p>
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Column Name</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>author</td><td>String</td><td>Book author</td></tr>
+                                    <tr><td>country</td><td>String</td><td>Author's country</td></tr>
+                                    <tr><td>imageLink</td><td>String</td><td>Link to cover image</td></tr>
+                                    <tr><td>language</td><td>String</td><td>Language of the book</td></tr>
+                                    <tr><td>link</td><td>String</td><td>Wikipedia link</td></tr>
+                                    <tr><td>pages</td><td>Integer</td><td>Number of pages</td></tr>
+                                    <tr><td>title</td><td>String</td><td>Book title</td></tr>
+                                    <tr><td>year</td><td>Integer</td><td>Year of publication</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Transformation Details</h5>
+                            <ul>
+                                <li>Dropped unnecessary columns (e.g., country, link, imageLink)</li>
+                                <li>Reordered columns to match expected output: author, title, year, language, pages</li>
+                                <li>Converted language names to ISO 639-1 language codes using <strong>language.json</strong></li>
+                                <li>Optional: Year formatting (e.g., "1700 BC", "400 AD")</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Deployment Results</h5>
+                            <ul>
+                                <li>Transformed JSON data was successfully uploaded into DynamoDB</li>
+                                <li>Each book is stored as an individual item in DynamoDB</li>
+                                <li>Lambda role was configured with permissions to read from S3 and write to DynamoDB</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Deliverables</h5>
+                            <ul>
+                                <li>Python script: <strong>
+                                    <a href="../docs/scratch_of_solution.py" target="_blank">
+                                    scratch_of_solution.py
+                                </a>
+                                </strong></li>
+                               
+                                <li>Transformed dataset</li>
+                            </ul>
+                            <a href="../docs/ETL_AWS_Solution.zip" download class="btn">
+                                <i class="fa fa-download"></i> Download Project Files (ZIP)
+                            </a>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Limitations</h5>
+                            <ul>
+                                <li>No validation on duplicate book titles</li>
+                                <li>Year transformation was optional and may need further refinement</li>
+                                <li>Small dataset, not production scale</li>
+                            </ul>
+                        </div>
+
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">Project video</h5>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/e-HJ87OufkI?si=pATFF64wMFTrvs_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="abh-footer-area">
+            <div class="container">
+                <div class="abh-footer-boottom text-center">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>© Copyright - All Rights Reserved. Designed by <a href="#">Tetiana Semenchuk</a></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul class="abh-banner-icon list-unstyled">
+                                <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/in/tetiana-semenchuk-481474161/"><i class="fab fa-linkedin"></i></a></li>
+                                <li class="github"><a target="_blank" href="https://github.com/tetiana-404"><i class="fab fa-github"></i></a></li>
+                                <li class="whatsapp"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
