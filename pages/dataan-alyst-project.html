@@ -442,117 +442,231 @@
                             <h5 class="abh-sheading">📸 Sample Visualization</h5>
                             <img src="../img/portfolio/project-1.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
-                            <p>🧠 <b>What the plot shows:</b> A histogram visualizing how product ListPrice values are
-                                distributed across the
-                                dataset.
+                            <div class="text-left">
+                                <h3>📊 Average Standard Cost, List Price, and Dealer Price by Product Subcategory</h3>
+                                <br><br>
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This grouped bar chart compares the <strong>average Standard Cost</strong>,
+                                    <strong>List
+                                        Price</strong>, and <strong>Dealer Price</strong> across different
+                                    <strong>Product
+                                        Subcategories</strong>.</p>
+                                <ul>
+                                    <li><strong>X-axis:</strong> Product Subcategories (e.g., Mountain Bikes, Road
+                                        Frames,
+                                        Helmets, Gloves, etc.)</li>
+                                    <li><strong>Y-axis:</strong> Price in USD</li>
+                                    <li><strong>Bars color legend:</strong>
+                                        <ul>
+                                            <li><span style="color:#1f77b4;">🟦 Blue:</span> Average Standard Cost
+                                                (Manufacturing Cost)</li>
+                                            <li><span style="color:#ff7f0e;">🟧 Orange:</span> Average List Price
+                                                (Retail
+                                                Price)</li>
+                                            <li><span style="color:#2ca02c;">🟩 Green:</span> Average Dealer Price
+                                                (Wholesale Price)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
-                                A KDE (Kernel Density Estimate) curve is overlaid to show the probability density —
-                                i.e., where prices are most
-                                concentrated.
-                                <br>
-                                🔍<b> Key Observations:</b>
+                                <hr>
+                                <br><br>
+                                <h4>📌 Insights &amp; Observations:</h4>
+                                <ul>
+                                    <li><strong>Highest Price Categories:</strong><br>
+                                        The highest average prices are observed in <strong>Mountain Bikes</strong>,
+                                        <strong>Road Frames</strong>, and <strong>Touring Bikes</strong>, often
+                                        exceeding
+                                        <strong>$1000 USD</strong>.
+                                    </li>
+                                    <li><strong>Typical Price Relationship:</strong><br>
+                                        In most subcategories:<br>
+                                        <strong>List Price &gt; Dealer Price &gt; Standard Cost</strong>,<br>
+                                        which reflects a typical retail pricing model.
+                                    </li>
+                                    <li><strong>Profit Margin Insights:</strong><br>
+                                        The largest price gaps (and likely the highest profit margins) appear in
+                                        categories
+                                        like <strong>Mountain Bikes</strong> and <strong>Road Frames</strong>.</li>
+                                    <li><strong>Low-Cost Categories:</strong><br>
+                                        Products like <strong>Gloves</strong>, <strong>Socks</strong>, and
+                                        <strong>Caps</strong> show low price levels and smaller profit margins, which
+                                        suggests high sales volume is needed to generate significant revenue.
+                                    </li>
+                                    <li><strong>Dealer Price Patterns:</strong><br>
+                                        The difference between <strong>Dealer Price</strong> and <strong>List
+                                            Price</strong>
+                                        varies by category, which could indicate different discount strategies for
+                                        dealers.
+                                    </li>
+                                </ul>
 
-                                Right-skewed distribution:
-                                Most products have list prices clustered between 0 and 1,000.
-                                A long right tail suggests a smaller number of very high-priced products.
-                                Outliers:
-                                A few products far to the right may represent premium or specialized items.
-                                Worth reviewing if they align with pricing strategy and customer demand.
-                                💡 Insights & Recommendations:
+                                <hr>
+                                <br><br>
+                                <h4>📌 Recommendations for Stakeholders:</h4>
+                                <ul>
+                                    <li>✅ Focus sales and marketing efforts on <strong>high-margin categories</strong>
+                                        (e.g., <strong>Mountain Bikes</strong>, <strong>Road Frames</strong>).</li>
+                                    <li>✅ Review pricing and promotional strategies for <strong>low-margin
+                                            categories</strong> (e.g., <strong>Gloves</strong>, <strong>Socks</strong>).
+                                    </li>
+                                    <li>✅ Analyze dealer discount policies in categories where <strong>Dealer
+                                            Price</strong>
+                                        is significantly lower than <strong>List Price</strong>.</li>
+                                    <li>✅ Use these insights to optimize production, pricing, and sales strategies.</li>
+                                </ul>
 
-                                Consider binning prices into categories (e.g., budget, mid-range, premium) for further
-                                analysis.
+                                <hr>
 
-                                If outliers are confirmed to be niche products, ensure their marketing and positioning
-                                match their pricing.
-                            </p>
+
+                            </div>
                         </div>
                         <div class="abh-section-title">
                             <img src="../img/portfolio/project-2.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
-                            <p>
-                                Here is the analysis of the scatter plot titled "List Price vs Standard Cost by Product
-                                Line":
+                            <div class="text-left">
+                                <h3>📈 Profit Margin by Product Line</h3>
                                 <br><br>
-                                🧠 <b>What this graph shows:</b>
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This <strong>box plot</strong> displays the distribution of <strong>profit
+                                        margins</strong> (calculated as <code>Dealer Price - Standard Cost</code>)
+                                    across
+                                    different <strong>Product Lines</strong>.</p>
+                                <ul>
+                                    <li><strong>X-axis:</strong> Product Line codes (<code>M</code>, <code>R</code>,
+                                        <code>S</code>, <code>T</code>, and <code>NaN</code> for undefined/missing
+                                        values)
+                                    </li>
+                                    <li><strong>Y-axis:</strong> Profit Margin (USD difference between Dealer Price and
+                                        Standard Cost)</li>
+                                </ul>
 
-                                X-axis: Standard Cost (how much the product costs to produce)
-                                Y-axis: List Price (how much the product is listed for sale)
-                                Colors: Different ProductLine categories (M, R, S, T)
-                                Each dot represents a product.
-                                <br>
-                                <br>
-                                <b>** 📊 Observations:**</b>
+                                <hr>
+                                <br><br>
+                                <h4>📌 Insights &amp; Observations:</h4>
+                                <ul>
+                                    <li><strong>Product Line M:</strong><br>
+                                        Shows the <strong>highest and widest spread of profit margins</strong>, with
+                                        median
+                                        profit significantly above other lines.<br>
+                                        This indicates a <strong>more profitable product line</strong>, but with higher
+                                        variability.</li>
+                                    <li><strong>Product Lines R, S, T:</strong><br>
+                                        Have <strong>lower and more concentrated margins</strong>.<br>
+                                        Especially Product Line <code>R</code>, which shows several <strong>outliers on
+                                            the
+                                            negative side</strong>, suggesting that some products may be sold below
+                                        cost.
+                                    </li>
+                                    <li><strong>Outliers:</strong><br>
+                                        There are several outliers (both positive and negative) across different product
+                                        lines, indicating <strong>unusual pricing</strong> or <strong>special
+                                            cases</strong>.</li>
+                                    <li><strong>Missing Product Line (<code>NaN</code>):</strong><br>
+                                        Products without a defined product line still show consistent positive margins
+                                        but
+                                        with fewer data points.</li>
+                                </ul>
 
-                                Strong Positive Correlation Across all product lines, as Standard Cost increases, List
-                                Price increases. This
-                                shows consistent pricing strategy — higher-cost products are priced higher.
+                                <hr>
+                                <br><br>
+                                <h4>📌 Recommendations for Stakeholders:</h4>
+                                <ul>
+                                    <li>✅ Investigate why <strong>Product Line M</strong> is significantly more
+                                        profitable—possible focus for marketing or product expansion.</li>
+                                    <li>✅ Review <strong>low-margin or negative-margin products</strong> in
+                                        <strong>R</strong>, <strong>S</strong>, and <strong>T</strong> lines to identify
+                                        possible pricing issues.
+                                    </li>
+                                    <li>✅ Address missing Product Line information (<code>NaN</code>) to improve data
+                                        quality.</li>
+                                    <li>✅ Further analyze outliers to understand unusual pricing or special cases.</li>
+                                </ul>
 
-                                Product Line M (blue):
+                                <hr>
 
-                                Concentrated at mid-to-high cost range.
-                                Most dots lie above the line of equality, suggesting higher markups.
-                                Indicates premium pricing — M products are more expensive and possibly higher margin.
-                                Product Line R (orange):
-                                Most frequent across the plot.
-                                Covers wide cost range — from very low-cost to high-cost products.
-                                Some high-cost products have relatively low markups, which may reduce profitability.
-                                Product Line S (green):
-                                Very few data points (low representation).
-                                Lies in the low-cost, low-price region.
-                                Suggests these are budget/low-tier products with limited margin or volume-focused.
-                                Product Line T (red):
-                                Also sparsely represented.
-                                Located in mid-cost range, but pricing is close to the standard cost.
-                                Suggests low profit margins, confirming the earlier boxplot insights.
-                                <br>
-                                <br>
-                                <b>📌 Insights & Recommendations:</b>
-
-                                Line M follows a strong value-based pricing model — likely high-end.
-                                Line R is diverse, but worth reviewing high-cost, low-margin items.
-                                Lines S and T have fewer entries and possibly tighter margins — consider repositioning
-                                or bundling strategies.
-                            </p>
+                            </div>
                         </div>
                         <div class="abh-section-title">
                             <img src="../img/portfolio/project-3.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
                             <p>
-                                Here is the analysis of your boxplot titled "Profit Margin by Product Line", where
-                                profit margin is calculated as:
-                                <br><br>
-                                <b>DealerPrice - StandardCost</b>
-                                <br><br>
-                                <b>M</b>
-                                Highest profit margin overall.
-                                Median profit margin is significantly positive.
-                                <b>R</b>
-                                <br><br>
-                                Median is close to zero — profits are low or neutral on average.
-                                Many outliers below zero, indicating some products are sold at a loss.
-                                <b>S</b>
-                                <br><br>
-                                Narrow box → low variability in profit margins.
-                                Mostly positive profits, but small overall margins.
-                                <b>T</b>
-                                <br><br>
-                                Median profit is negative, meaning the typical product in this line sells at a loss.
-                                Many negative outliers, and only a few with any substantial margin.
-                                This is a potentially problematic line, needing pricing or cost review.
-                                <br><br>
-                                <b>📊 General Insights:</b>
 
-                                Line M stands out as the most profitable and variable.
-                                Line T may be underpriced or expensive to produce — a candidate for financial
-                                optimization.
-                                Lines R and S are marginally profitable or break-even but might still be strategic.
-                                <br><br>
-                                <b>✅ Recommendations:</b>
-
-                                Audit Product Line T — why are most products losing money?
-                                Consider promoting high-margin products from Line M.
                             </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-4.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>
+
+                            </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-5.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>
+
+                            </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-6.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <p>
+
+                            </p>
+                        </div>
+                        <div class="abh-section-title">
+                            <img src="../img/portfolio/project-7.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <div class="text-left">
+                                <br><br>
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This boxplot visualizes the distribution of <strong>Profit Margin (%)</strong> across
+                                    different <strong>Product Subcategories</strong>.</p>
+                                <ul>
+                                    <li><strong>X-axis:</strong> Product Subcategories (e.g., Road Frames, Helmets,
+                                        Mountain
+                                        Bikes, Gloves, etc.)</li>
+                                    <li><strong>Y-axis:</strong> Profit Margin (can be negative, zero, or positive)</li>
+                                    <li>Each box shows the spread of profit margins (interquartile range), median line,
+                                        and
+                                        outliers (dots).</li>
+                                </ul>
+                                <br><br>
+                                <h4>📌 Insights &amp; Observations:</h4>
+                                <ul>
+                                    <li><strong>High Profit Margin Categories:</strong><br>
+                                        Mountain Bikes, Forks, Headsets, and Cranksets have noticeably higher profit
+                                        margins, with many products exceeding 50% margin.<br>
+                                        These categories represent high-margin products and could be targeted for
+                                        promotional or sales focus.</li>
+                                    <li><strong>Negative Profit Margins:</strong><br>
+                                        Some subcategories like Touring Bikes, Caps, and Bottom Brackets show negative
+                                        margins, indicating potential loss-making products or pricing issues.</li>
+                                    <li><strong>Large Variability:</strong><br>
+                                        Categories like Mountain Bikes and Forks have a wide spread of margins,
+                                        suggesting
+                                        inconsistency in pricing or production costs within these subcategories.</li>
+                                    <li><strong>Stable Low-Margin Categories:</strong><br>
+                                        Subcategories such as Locks, Gloves, and Lights have low but stable margins with
+                                        small interquartile ranges.</li>
+                                </ul>
+                                <br><br>
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ Focus on high-margin categories for marketing and sales campaigns (e.g.,
+                                        Mountain
+                                        Bikes, Forks).</li>
+                                    <li>✅ Investigate negative margin subcategories (Touring Bikes, Caps) to understand
+                                        if
+                                        it's due to discounting, high production costs, or other factors.</li>
+                                    <li>✅ Review pricing strategy for categories with high variability in margins.</li>
+                                    <li>✅ Analyze low-margin but high-volume categories (like Gloves, Lights) for
+                                        possible
+                                        bundling or upsell opportunities.</li>
+                                </ul>
+
+                            </div>
                         </div>
                     </div>
                 </div>

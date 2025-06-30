@@ -389,12 +389,19 @@ button, input, textarea:focus {
 	letter-spacing:0.08em;
 }
 .abh-section-title p {
-	width: 50%;
+	width: 100%;
 	font-family: var(--thm-font);
 	margin: 0 auto;
 	font-size: 16px;
 	font-weight: 300;
 	margin-top: 25px;
+	
+}
+.abh-section-title .text-left {
+	width: 60%;
+  margin: 25px auto;
+  text-align: left;
+  display: block;
 }
 /*
 * ----------------------------------------------------------------------------------------
