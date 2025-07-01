@@ -326,6 +326,57 @@
                     </div>
                 </div>
 
+                <!-- Identified Problems or Challenges in Dataset -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h5 class="abh-sheading">🚩 Identified Problems or Challenges in Dataset</h5>
+                            <ul>
+                                <li>🔎 <strong>Missing Values:</strong>
+                                    Several key columns contained missing values:
+                                    <ul>
+                                        <li>WeightUnitMeasureCode (122 missing)</li>
+                                        <li>SizeUnitMeasureCode (144 missing)</li>
+                                        <li>Color (56 missing)</li>
+                                        <li>EndDate (197 missing)</li>
+                                        <li>Status (200 missing)</li>
+                                    </ul>
+                                    Some multilingual description fields had limited missing data,
+                                    while fields like <strong>LargePhoto</strong> had 100% missing values and were
+                                    considered for
+                                    removal.
+                                </li>
+
+                                <li style="margin-top:15px">🧯 <strong>Duplicates:</strong>
+                                    Duplicate rows were found and removed to ensure analysis accuracy and avoid skewed
+                                    results.
+                                </li>
+
+                                <li style="margin-top:15px">⚠️ <strong>Inconsistent Data & Outliers:</strong>
+                                    <ul>
+                                        <li>Numerical fields (StandardCost, ListPrice, DealerPrice, Weight) were stored
+                                            as strings with
+                                            inconsistent formatting (e.g., commas instead of dots as decimal
+                                            separators).</li>
+                                        <li>Categorical values had issues like leading/trailing spaces and mixed casing
+                                            (e.g., ' Red '
+                                            vs 'Red'). Data normalization was applied.</li>
+                                        <li>Extremely high or low values in pricing fields were flagged as possible
+                                            outliers or data
+                                            entry errors and reviewed during EDA.</li>
+                                    </ul>
+                                </li>
+
+                                <li style="margin-top:15px">🚫 <strong>Irrelevant Columns:</strong>
+                                    Columns with 0 non-null values (e.g., OLE DB Source ProductSubcategoryKey,
+                                    LargePhoto,
+                                    ProductCategoryKey) were dropped from the dataset as irrelevant for analysis.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Data Cleaning Process -->
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
@@ -454,7 +505,8 @@
                                     <strong>List
                                         Price</strong>, and <strong>Dealer Price</strong> across different
                                     <strong>Product
-                                        Subcategories</strong>.</p>
+                                        Subcategories</strong>.
+                                </p>
                                 <ul>
                                     <li><strong>X-axis:</strong> Product Subcategories (e.g., Mountain Bikes, Road
                                         Frames,
@@ -594,16 +646,138 @@
                         <div class="abh-section-title">
                             <img src="../img/portfolio/project-3.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
-                            <p>
+                            <div class="text-left">
+                                <h3> 📊 Profit Margin by Product Subcategory</h3>
+                                <br><br>
+                                <h4>🧠 What this graph shows:</h4>
 
-                            </p>
+                                <p>This <strong>boxplot</strong> illustrates the distribution of <strong>Profit
+                                        Margin</strong> across different <strong>Product Subcategories</strong>.
+                                <ul>
+                                    <li> <strong>X-axis:</strong> Product Subcategories (e.g., Road Frames, Helmets,
+                                        Mountain Bikes, etc.).</li>
+                                    <li> <strong>Y-axis:</strong> Profit Margin values.</li>
+                                </ul>
+                                The boxplot visualizes the <strong>median</strong>, <strong>interquartile range
+                                    (IQR)</strong>, <strong>spread of the data</strong>, and <strong>outliers</strong>
+                                for each subcategory.
+                                </p>
+                                <hr>
+                                <br><br>
+                                <h4> 📌 Insights & Observations:</h4>
+                                <p>
+                                    - <strong>Subcategories with the highest median profit margins</strong> include:
+                                <ul>
+                                    <li><strong>Forks</strong></li>
+                                    <li> <strong>Mountain Bikes</strong></li>
+                                    <li> <strong>Road Bikes</strong></li>
+                                </ul>
+                                <br>
+                                - <strong>High variability</strong> in profit margins is seen in:
+                                <ul>
+                                    <li><strong>Mountain Bikes</strong></li>
+                                    <li> <strong>Road Bikes</strong></li>
+                                    <li> <strong>Forks</strong></li>
+                                </ul>
+                                This suggests that pricing or cost structures within these subcategories vary widely.
+                                <br>
+                                - <strong>Subcategories with negative or low median profit margins:</strong>
+                                <ul>
+                                    <li> <strong>Caps</strong></li>
+                                    <li><strong>Jerseys</strong></li>
+                                    <li><strong>Bottom Brackets</strong></li>
+                                </ul>
+                                These may represent <strong>low-margin products</strong>, <strong>loss leaders</strong>,
+                                or <strong>data entry anomalies</strong> that require further investigation.
+                                <br>
+                                - <strong>Presence of outliers:</strong>
+                                Several subcategories (like <strong>Road Frames</strong>, <strong>Mountain
+                                    Bikes</strong>, and <strong>Forks</strong>) contain significant outliers, indicating
+                                some products with unusually high or low profit margins.
+                                </p>
+                                <hr>
+                                <br><br>
+                                <h4> 📌 Recommendations:</h4>
+                                <p>
+                                <ul>
+                                    <li> ✅ Investigate why certain subcategories like <strong>Caps</strong> and
+                                        <strong>Bottom Brackets</strong> have negative margins — is this intentional
+                                        (discounted products) or a data error?</li>
+                                    <li> ✅ Further explore pricing and cost optimization opportunities in subcategories
+                                        with wide profit margin variability.</li>
+                                    <li> ✅ Review outliers for potential data quality issues or exceptional business
+                                        cases.</li>
+                                </ul>
+                                </p>
+
+                            </div>
                         </div>
                         <div class="abh-section-title">
                             <img src="../img/portfolio/project-4.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
-                            <p>
+                            <div class="text-left">
+                                <h3>📊 Product Count by Size and Class</h3>
+                                <br><br>
+                            
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This <strong>heatmap</strong> illustrates the <strong>distribution of product counts</strong> based on
+                                    <strong>Size</strong> (x-axis) and <strong>Product Class</strong> (y-axis).
+                                </p>
+                            
+                                <ul>
+                                    <li><strong>X-axis:</strong> Different product sizes (ranging from numeric sizes like <code>38</code>,
+                                        <code>40</code>,
+                                        up to <code>70</code>, and categorical sizes like <code>L</code>, <code>M</code>, <code>NA</code>,
+                                        <code>S</code>, <code>XL</code>).</li>
+                                    <li><strong>Y-axis:</strong> Product classes: <code>H</code> (High), <code>L</code> (Low), <code>M</code>
+                                        (Medium),
+                                        and <code>NA</code> (missing/undefined class).</li>
+                                    <li><strong>Color Intensity:</strong> Represents the number of products in each size-class combination.</li>
+                                </ul>
+                            
+                                <hr>
+                                <br><br>
+                            
+                                <h4>📌 Insights & Observations:</h4>
+                                <ul>
+                                    <li><strong>NA Class:</strong><br>
+                                        The <code>NA</code> class has a <strong>high concentration in sizes NA, M, and L</strong>, especially with
+                                        <strong>39 products in size NA</strong> category.
+                                        This may indicate <strong>missing or undefined class labeling</strong> for many products of these sizes.
+                                    </li>
+                            
+                                    <li><strong>High Class (H):</strong><br>
+                                        Products classified as <code>H</code> are distributed across almost all numeric sizes (38 to 62), with
+                                        noticeable
+                                        concentrations around sizes <code>44</code> to <code>50</code> and also in <code>L</code> category.</li>
+                            
+                                    <li><strong>Low Class (L):</strong><br>
+                                        A significant number of products appear in sizes <code>44</code>, <code>50</code>, and <code>60</code> in
+                                        class <code>L</code>.</li>
+                            
+                                    <li><strong>Medium Class (M):</strong><br>
+                                        Product counts are more evenly distributed across smaller numeric sizes (38 to 50) with lower quantities
+                                        compared to other classes.</li>
+                                </ul>
+                            
+                                <hr>
+                                <br><br>
+                            
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ <strong>Investigate missing class labels:</strong> The large number of products in <code>NA</code> class
+                                        should be reviewed and properly categorized for accurate reporting.</li>
+                                    <li>✅ <strong>Review size distribution:</strong> Consider aligning manufacturing and inventory decisions with
+                                        the most popular sizes within each class.</li>
+                                    <li>✅ <strong>Analyze Class H:</strong> High-class products appear across a wide range of sizes. Understanding
+                                        demand patterns for these could improve production planning.</li>
+                                    <li>✅ <strong>Further segmentation:</strong> Consider cross-analyzing with Profit Margin or Sales data to see
+                                        which size-class combinations are most profitable.</li>
+                                </ul>
+                            
+                                <hr>
+                            </div>
 
-                            </p>
                         </div>
                         <div class="abh-section-title">
                             <img src="../img/portfolio/project-5.png" alt="Python Data Analysis Visualization"

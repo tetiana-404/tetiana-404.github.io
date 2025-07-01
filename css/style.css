@@ -384,11 +384,13 @@ button, input, textarea:focus {
 	text-transform:capitalize;
 	font-family:  var(--thm-font);
 }
+.abh-section-title h4,
 .abh-section-title h5 {
 	color:  var(--thm-color);
 	letter-spacing:0.08em;
 }
-.abh-section-title p {
+.abh-section-title p,
+.abh-section-content p {
 	width: 100%;
 	font-family: var(--thm-font);
 	margin: 0 auto;
@@ -397,12 +399,45 @@ button, input, textarea:focus {
 	margin-top: 25px;
 	
 }
-.abh-section-title .text-left {
+.abh-section-title .text-left,
+.abh-section-content .text-left {
 	width: 60%;
   margin: 25px auto;
   text-align: left;
   display: block;
 }
+
+.abh-section-content ul {
+  list-style: none; /* Прибираємо стандартні маркери */
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.abh-section-content ul li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.abh-section-content ul li::before {
+  content: "✔️"; /* Можна змінити на будь-який символ або emoji */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2e8b57; /* Темно-зелений */
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.abh-section-content ul li:hover {
+  color: #0066cc;
+  transform: translateX(5px);
+}
+
 /*
 * ----------------------------------------------------------------------------------------
 * 01.END GENERAL STYLE
