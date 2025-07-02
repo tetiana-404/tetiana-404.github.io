@@ -425,21 +425,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Recommendations -->
-                <div class="row">
-                    <div class="col-lg-12 col-md-12">
-                        <div class="abh-section-title">
-                            <h5 class="abh-sheading">✅ Recommendations</h5>
-                            <ul>
-                                <li>Ensure weight data is consistently entered for logistics analysis</li>
-                                <li>Review duplicate SKU imports during data entry</li>
-                                <li>Investigate outlier pricing for possible adjustment</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+                              
                 <!-- Limitations -->
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
@@ -493,13 +479,16 @@
                 <!-- Visualization Screenshot -->
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
+                        <!-- START project - 1  -->
                         <div class="abh-section-title">
                             <h5 class="abh-sheading">📸 Sample Visualization</h5>
+                            <br><br>
+                            <h2>📊 1. Average Standard Cost, List Price, and Dealer Price by Product Subcategory</h2>
+                            <br>
                             <img src="../img/portfolio/project-1.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
                             <div class="text-left">
-                                <h3>📊 Average Standard Cost, List Price, and Dealer Price by Product Subcategory</h3>
-                                <br><br>
+
                                 <h4>🧠 What this graph shows:</h4>
                                 <p>This grouped bar chart compares the <strong>average Standard Cost</strong>,
                                     <strong>List
@@ -577,12 +566,17 @@
 
                             </div>
                         </div>
+                        <!-- END project - 1  -->
+
+                        <!-- START project - 2  -->
                         <div class="abh-section-title">
+                            <br><br>
+                            <h2>📈 2. Profit Margin by Product Line</h2>
+                            <br>
                             <img src="../img/portfolio/project-2.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
                             <div class="text-left">
-                                <h3>📈 Profit Margin by Product Line</h3>
-                                <br><br>
+
                                 <h4>🧠 What this graph shows:</h4>
                                 <p>This <strong>box plot</strong> displays the distribution of <strong>profit
                                         margins</strong> (calculated as <code>Dealer Price - Standard Cost</code>)
@@ -590,7 +584,7 @@
                                     different <strong>Product Lines</strong>.</p>
                                 <ul>
                                     <li><strong>X-axis:</strong> Product Line codes (<code>M</code>, <code>R</code>,
-                                        <code>S</code>, <code>T</code>, and <code>NaN</code> for undefined/missing
+                                        <code>S</code>, <code>T</code>, and <code>No line</code> for undefined/missing
                                         values)
                                     </li>
                                     <li><strong>Y-axis:</strong> Profit Margin (USD difference between Dealer Price and
@@ -618,7 +612,7 @@
                                         There are several outliers (both positive and negative) across different product
                                         lines, indicating <strong>unusual pricing</strong> or <strong>special
                                             cases</strong>.</li>
-                                    <li><strong>Missing Product Line (<code>NaN</code>):</strong><br>
+                                    <li><strong>Missing Product Line (<code>No line</code>):</strong><br>
                                         Products without a defined product line still show consistent positive margins
                                         but
                                         with fewer data points.</li>
@@ -634,7 +628,8 @@
                                         <strong>R</strong>, <strong>S</strong>, and <strong>T</strong> lines to identify
                                         possible pricing issues.
                                     </li>
-                                    <li>✅ Address missing Product Line information (<code>NaN</code>) to improve data
+                                    <li>✅ Address missing Product Line information (<code>No line</code>) to improve
+                                        data
                                         quality.</li>
                                     <li>✅ Further analyze outliers to understand unusual pricing or special cases.</li>
                                 </ul>
@@ -643,212 +638,478 @@
 
                             </div>
                         </div>
+                        <!-- END project - 2  -->
+
+                        <!-- START project - 3  -->
                         <div class="abh-section-title">
+                            <br><br>
+                            <h2> 📊 3. Profit Margin by Product Subcategory</h2>
+                            <br>
                             <img src="../img/portfolio/project-3.png" alt="Python Data Analysis Visualization"
                                 class="img-fluid">
                             <div class="text-left">
-                                <h3> 📊 Profit Margin by Product Subcategory</h3>
-                                <br><br>
                                 <h4>🧠 What this graph shows:</h4>
-
-                                <p>This <strong>boxplot</strong> illustrates the distribution of <strong>Profit
-                                        Margin</strong> across different <strong>Product Subcategories</strong>.
-                                <ul>
-                                    <li> <strong>X-axis:</strong> Product Subcategories (e.g., Road Frames, Helmets,
-                                        Mountain Bikes, etc.).</li>
-                                    <li> <strong>Y-axis:</strong> Profit Margin values.</li>
-                                </ul>
-                                The boxplot visualizes the <strong>median</strong>, <strong>interquartile range
-                                    (IQR)</strong>, <strong>spread of the data</strong>, and <strong>outliers</strong>
-                                for each subcategory.
-                                </p>
-                                <hr>
-                                <br><br>
-                                <h4> 📌 Insights & Observations:</h4>
-                                <p>
-                                    - <strong>Subcategories with the highest median profit margins</strong> include:
-                                <ul>
-                                    <li><strong>Forks</strong></li>
-                                    <li> <strong>Mountain Bikes</strong></li>
-                                    <li> <strong>Road Bikes</strong></li>
-                                </ul>
-                                <br>
-                                - <strong>High variability</strong> in profit margins is seen in:
-                                <ul>
-                                    <li><strong>Mountain Bikes</strong></li>
-                                    <li> <strong>Road Bikes</strong></li>
-                                    <li> <strong>Forks</strong></li>
-                                </ul>
-                                This suggests that pricing or cost structures within these subcategories vary widely.
-                                <br>
-                                - <strong>Subcategories with negative or low median profit margins:</strong>
-                                <ul>
-                                    <li> <strong>Caps</strong></li>
-                                    <li><strong>Jerseys</strong></li>
-                                    <li><strong>Bottom Brackets</strong></li>
-                                </ul>
-                                These may represent <strong>low-margin products</strong>, <strong>loss leaders</strong>,
-                                or <strong>data entry anomalies</strong> that require further investigation.
-                                <br>
-                                - <strong>Presence of outliers:</strong>
-                                Several subcategories (like <strong>Road Frames</strong>, <strong>Mountain
-                                    Bikes</strong>, and <strong>Forks</strong>) contain significant outliers, indicating
-                                some products with unusually high or low profit margins.
-                                </p>
-                                <hr>
-                                <br><br>
-                                <h4> 📌 Recommendations:</h4>
-                                <p>
-                                <ul>
-                                    <li> ✅ Investigate why certain subcategories like <strong>Caps</strong> and
-                                        <strong>Bottom Brackets</strong> have negative margins — is this intentional
-                                        (discounted products) or a data error?</li>
-                                    <li> ✅ Further explore pricing and cost optimization opportunities in subcategories
-                                        with wide profit margin variability.</li>
-                                    <li> ✅ Review outliers for potential data quality issues or exceptional business
-                                        cases.</li>
-                                </ul>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="abh-section-title">
-                            <img src="../img/portfolio/project-4.png" alt="Python Data Analysis Visualization"
-                                class="img-fluid">
-                            <div class="text-left">
-                                <h3>📊 Product Count by Size and Class</h3>
-                                <br><br>
-                            
-                                <h4>🧠 What this graph shows:</h4>
-                                <p>This <strong>heatmap</strong> illustrates the <strong>distribution of product counts</strong> based on
-                                    <strong>Size</strong> (x-axis) and <strong>Product Class</strong> (y-axis).
-                                </p>
-                            
-                                <ul>
-                                    <li><strong>X-axis:</strong> Different product sizes (ranging from numeric sizes like <code>38</code>,
-                                        <code>40</code>,
-                                        up to <code>70</code>, and categorical sizes like <code>L</code>, <code>M</code>, <code>NA</code>,
-                                        <code>S</code>, <code>XL</code>).</li>
-                                    <li><strong>Y-axis:</strong> Product classes: <code>H</code> (High), <code>L</code> (Low), <code>M</code>
-                                        (Medium),
-                                        and <code>NA</code> (missing/undefined class).</li>
-                                    <li><strong>Color Intensity:</strong> Represents the number of products in each size-class combination.</li>
-                                </ul>
-                            
-                                <hr>
-                                <br><br>
-                            
-                                <h4>📌 Insights & Observations:</h4>
-                                <ul>
-                                    <li><strong>NA Class:</strong><br>
-                                        The <code>NA</code> class has a <strong>high concentration in sizes NA, M, and L</strong>, especially with
-                                        <strong>39 products in size NA</strong> category.
-                                        This may indicate <strong>missing or undefined class labeling</strong> for many products of these sizes.
-                                    </li>
-                            
-                                    <li><strong>High Class (H):</strong><br>
-                                        Products classified as <code>H</code> are distributed across almost all numeric sizes (38 to 62), with
-                                        noticeable
-                                        concentrations around sizes <code>44</code> to <code>50</code> and also in <code>L</code> category.</li>
-                            
-                                    <li><strong>Low Class (L):</strong><br>
-                                        A significant number of products appear in sizes <code>44</code>, <code>50</code>, and <code>60</code> in
-                                        class <code>L</code>.</li>
-                            
-                                    <li><strong>Medium Class (M):</strong><br>
-                                        Product counts are more evenly distributed across smaller numeric sizes (38 to 50) with lower quantities
-                                        compared to other classes.</li>
-                                </ul>
-                            
-                                <hr>
-                                <br><br>
-                            
-                                <h4>📌 Recommendations:</h4>
-                                <ul>
-                                    <li>✅ <strong>Investigate missing class labels:</strong> The large number of products in <code>NA</code> class
-                                        should be reviewed and properly categorized for accurate reporting.</li>
-                                    <li>✅ <strong>Review size distribution:</strong> Consider aligning manufacturing and inventory decisions with
-                                        the most popular sizes within each class.</li>
-                                    <li>✅ <strong>Analyze Class H:</strong> High-class products appear across a wide range of sizes. Understanding
-                                        demand patterns for these could improve production planning.</li>
-                                    <li>✅ <strong>Further segmentation:</strong> Consider cross-analyzing with Profit Margin or Sales data to see
-                                        which size-class combinations are most profitable.</li>
-                                </ul>
-                            
-                                <hr>
-                            </div>
-
-                        </div>
-                        <div class="abh-section-title">
-                            <img src="../img/portfolio/project-5.png" alt="Python Data Analysis Visualization"
-                                class="img-fluid">
-                            <p>
-
-                            </p>
-                        </div>
-                        <div class="abh-section-title">
-                            <img src="../img/portfolio/project-6.png" alt="Python Data Analysis Visualization"
-                                class="img-fluid">
-                            <p>
-
-                            </p>
-                        </div>
-                        <div class="abh-section-title">
-                            <img src="../img/portfolio/project-7.png" alt="Python Data Analysis Visualization"
-                                class="img-fluid">
-                            <div class="text-left">
-                                <br><br>
-                                <h4>🧠 What this graph shows:</h4>
-                                <p>This boxplot visualizes the distribution of <strong>Profit Margin (%)</strong> across
-                                    different <strong>Product Subcategories</strong>.</p>
+                                <p>This <strong>box plot</strong> displays the <strong>distribution of profit
+                                        margins</strong> (calculated as the
+                                    difference between Dealer Price and Standard Cost) across different <strong>Product
+                                        Subcategories</strong>.</p>
                                 <ul>
                                     <li><strong>X-axis:</strong> Product Subcategories (e.g., Road Frames, Helmets,
-                                        Mountain
-                                        Bikes, Gloves, etc.)</li>
-                                    <li><strong>Y-axis:</strong> Profit Margin (can be negative, zero, or positive)</li>
-                                    <li>Each box shows the spread of profit margins (interquartile range), median line,
-                                        and
-                                        outliers (dots).</li>
+                                        Socks, Mountain Bikes, Gloves,
+                                        etc.).</li>
+                                    <li><strong>Y-axis:</strong> Profit Margin (in USD), which can be negative, zero, or
+                                        positive.</li>
                                 </ul>
-                                <br><br>
+                                <hr>
+
                                 <h4>📌 Insights &amp; Observations:</h4>
                                 <ul>
                                     <li><strong>High Profit Margin Categories:</strong><br>
-                                        Mountain Bikes, Forks, Headsets, and Cranksets have noticeably higher profit
-                                        margins, with many products exceeding 50% margin.<br>
-                                        These categories represent high-margin products and could be targeted for
-                                        promotional or sales focus.</li>
+                                        Subcategories like <strong>Mountain Bikes</strong>, <strong>Forks</strong>,
+                                        <strong>Headsets</strong>, and
+                                        <strong>Cranksets</strong> show <strong>significantly higher profit
+                                            margins</strong>, with many products
+                                        exceeding <strong>50 USD</strong> in margin and some reaching over <strong>100
+                                            USD</strong>.
+                                    </li>
+
                                     <li><strong>Negative Profit Margins:</strong><br>
-                                        Some subcategories like Touring Bikes, Caps, and Bottom Brackets show negative
-                                        margins, indicating potential loss-making products or pricing issues.</li>
+                                        Categories such as <strong>Bottom Brackets</strong>, <strong>Touring
+                                            Bikes</strong>, and
+                                        <strong>Caps</strong> display <strong>negative median profit margins</strong>,
+                                        indicating potential pricing
+                                        issues or products sold at a loss.
+                                    </li>
+
                                     <li><strong>Large Variability:</strong><br>
-                                        Categories like Mountain Bikes and Forks have a wide spread of margins,
-                                        suggesting
-                                        inconsistency in pricing or production costs within these subcategories.</li>
+                                        <strong>Mountain Bikes</strong> and <strong>Forks</strong> exhibit <strong>wide
+                                            spread in margins</strong>,
+                                        suggesting inconsistency in pricing or production costs within these
+                                        subcategories.
+                                    </li>
+
                                     <li><strong>Stable Low-Margin Categories:</strong><br>
-                                        Subcategories such as Locks, Gloves, and Lights have low but stable margins with
-                                        small interquartile ranges.</li>
+                                        Subcategories like <strong>Gloves</strong>, <strong>Socks</strong>, and
+                                        <strong>Lights</strong> show
+                                        <strong>low but stable margins</strong>, with smaller interquartile ranges and
+                                        fewer outliers.
+                                    </li>
+
+                                    <li><strong>Presence of Outliers:</strong><br>
+                                        Several categories, including <strong>Mountain Bikes</strong> and <strong>Road
+                                            Frames</strong>, have
+                                        noticeable outliers on both the positive and negative sides, indicating unusual
+                                        pricing or special sales
+                                        scenarios.</li>
                                 </ul>
-                                <br><br>
+                                <hr>
+
                                 <h4>📌 Recommendations:</h4>
                                 <ul>
-                                    <li>✅ Focus on high-margin categories for marketing and sales campaigns (e.g.,
-                                        Mountain
-                                        Bikes, Forks).</li>
-                                    <li>✅ Investigate negative margin subcategories (Touring Bikes, Caps) to understand
-                                        if
-                                        it's due to discounting, high production costs, or other factors.</li>
-                                    <li>✅ Review pricing strategy for categories with high variability in margins.</li>
-                                    <li>✅ Analyze low-margin but high-volume categories (like Gloves, Lights) for
-                                        possible
-                                        bundling or upsell opportunities.</li>
+                                    <li>✅ <strong>Focus on High-Margin Categories:</strong><br>
+                                        Prioritize marketing and sales efforts for <strong>Mountain Bikes</strong>,
+                                        <strong>Forks</strong>, and
+                                        <strong>Headsets</strong>, which demonstrate strong profitability.
+                                    </li>
+
+                                    <li>✅ <strong>Investigate Negative Margin Categories:</strong><br>
+                                        Review <strong>Touring Bikes</strong>, <strong>Bottom Brackets</strong>, and
+                                        <strong>Caps</strong> to
+                                        determine if negative margins are due to discounting, high production costs, or
+                                        data errors.</li>
+
+                                    <li>✅ <strong>Address High Variability:</strong><br>
+                                        Analyze the wide spread in margins for categories like <strong>Mountain
+                                            Bikes</strong> and
+                                        <strong>Forks</strong> to improve pricing consistency.
+                                    </li>
+
+                                    <li>✅ <strong>Review Outliers:</strong><br>
+                                        Examine extreme outliers across categories to ensure data accuracy and assess if
+                                        any special pricing
+                                        strategies are affecting margins.</li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <!-- END project - 3  -->
+
+                        <!-- START project - 4  -->
+                        <div class="abh-section-title">
+                            <br><br>
+                            <h2>📊 4. Product Count by Size and Class</h2>
+                            <br>
+                            <img src="../img/portfolio/project-4.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <div class="text-left">
+
+
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This <strong>heatmap</strong> illustrates the <strong>distribution of product
+                                        counts</strong> based on
+                                    <strong>Size</strong> (x-axis) and <strong>Product Class</strong> (y-axis).
+                                </p>
+
+                                <ul>
+                                    <li><strong>X-axis:</strong> Different product sizes (ranging from numeric sizes
+                                        like <code>38</code>,
+                                        <code>40</code>,
+                                        up to <code>70</code>, and categorical sizes like <code>L</code>,
+                                        <code>M</code>,
+                                        <code>S</code>, <code>XL</code>, <code>No size</code>).
+                                    </li>
+                                    <li><strong>Y-axis:</strong> Product classes: <code>H</code> (High), <code>L</code>
+                                        (Low), <code>M</code>
+                                        (Medium),
+                                        and <code>No class</code> (missing/undefined class).</li>
+                                    <li><strong>Color Intensity:</strong> Represents the number of products in each
+                                        size-class combination.</li>
+                                </ul>
+
+                                <hr>
+                                <br><br>
+
+                                <h4>📌 Insights & Observations:</h4>
+                                <ul>
+                                    <li><strong>'No class' Class:</strong><br>
+                                        The <code>'No class'</code> class has a <strong>high concentration in sizes 'No
+                                            size', M, and
+                                            L</strong>, especially with
+                                        <strong>39 products in size 'No size'</strong> category.
+                                        This may indicate <strong>missing or undefined class labeling</strong> for many
+                                        products of these sizes.
+                                    </li>
+
+                                    <li><strong>High Class (H):</strong><br>
+                                        Products classified as <code>H</code> are distributed across almost all numeric
+                                        sizes (38 to 62), with
+                                        noticeable
+                                        concentrations around sizes <code>44</code> to <code>50</code> and also in
+                                        <code>L</code> category.
+                                    </li>
+
+                                    <li><strong>Low Class (L):</strong><br>
+                                        A significant number of products appear in sizes <code>44</code>,
+                                        <code>50</code>, and <code>60</code> in
+                                        class <code>L</code>.
+                                    </li>
+
+                                    <li><strong>Medium Class (M):</strong><br>
+                                        Product counts are more evenly distributed across smaller numeric sizes (38 to
+                                        50) with lower quantities
+                                        compared to other classes.</li>
+                                </ul>
+
+                                <hr>
+                                <br><br>
+
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ <strong>Investigate missing class labels:</strong> The large number of
+                                        products in <code>'No class'</code> class
+                                        should be reviewed and properly categorized for accurate reporting.</li>
+                                    <li>✅ <strong>Review size distribution:</strong> Consider aligning manufacturing and
+                                        inventory decisions with
+                                        the most popular sizes within each class.</li>
+                                    <li>✅ <strong>Analyze Class H:</strong> High-class products appear across a wide
+                                        range of sizes. Understanding
+                                        demand patterns for these could improve production planning.</li>
+                                    <li>✅ <strong>Further segmentation:</strong> Consider cross-analyzing with Profit
+                                        Margin or Sales data to see
+                                        which size-class combinations are most profitable.</li>
+                                </ul>
+
+                                <hr>
+                            </div>
+
+                        </div>
+                        <!-- END project - 4  -->
+
+                        <!-- START project - 5  -->
+                        <div class="abh-section-title">
+                            <br><br>
+                            <h2>📊 5. Product Count by Style</h2>
+                            <br>
+                            <img src="../img/portfolio/project-5.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <div class="text-left">
+
+
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This bar chart illustrates the distribution of product counts across different Style
+                                    categories.</p>
+                                <ul>
+                                    <li><strong>X-axis:</strong> Style categories (U, Unknown, W, M).</li>
+                                    <li><strong>Y-axis:</strong> Number of products in each style.</li>
+                                </ul>
+                                <hr>
+
+                                <h4>📌 Insights &amp; Observations:</h4>
+                                <ul>
+                                    <li><strong>U (Unisex):</strong><br>
+                                        The most dominant style category, with over 250 products, indicating a strong
+                                        focus on unisex products in
+                                        the inventory.</li>
+
+                                    <li><strong>Unknown:</strong><br>
+                                        Contains around 90 products, suggesting that a significant portion of items have
+                                        missing or undefined style
+                                        information.</li>
+
+                                    <li><strong>W (Women):</strong><br>
+                                        Approximately 40 products are designated for women’s style.</li>
+
+                                    <li><strong>M (Men):</strong><br>
+                                        Very few products fall into this category (less than 10 items), making it the
+                                        least represented style.</li>
+                                </ul>
+                                <hr>
+
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ <strong>Review Unknown Category:</strong><br>
+                                        Investigate and update missing style information to improve data quality and
+                                        reporting accuracy.</li>
+
+                                    <li>✅ <strong>Assess Men’s Category:</strong><br>
+                                        Consider evaluating whether the low number of men’s products aligns with market
+                                        demand or indicates a
+                                        potential growth area.</li>
+
+                                    <li>✅ <strong>Focus on Unisex Trends:</strong><br>
+                                        Analyze sales performance for unisex products to determine if the high count
+                                        translates into strong sales,
+                                        helping inform future inventory decisions.</li>
                                 </ul>
 
                             </div>
                         </div>
+                        <!-- END project - 5  -->
+
+                        <!-- START project - 6  -->
+                        <div class="abh-section-title">
+                            <br><br>
+                            <h2>📊 6. Product Count by Color</h2>
+                            <br>
+                            <img src="../img/portfolio/project-6.2.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <div class="text-left">
+
+
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This <strong>bar chart</strong> visualizes the <strong>distribution of
+                                        products</strong> by their <strong>color category</strong>.</p>
+
+                                <ul>
+                                    <li><strong>X-axis:</strong> Different product colors (e.g., <code>Black</code>,
+                                        <code>Red</code>, <code>Silver</code>, <code>Yellow</code>, etc.).
+                                    </li>
+                                    <li><strong>Y-axis:</strong> Number of products available in each color category.
+                                    </li>
+                                    <li><strong>Color Palette:</strong> A pastel color scheme has been used to visually
+                                        distinguish each color category.</li>
+                                </ul>
+
+                                <hr>
+                                <br><br>
+
+                                <h4>📌 Insights & Observations:</h4>
+                                <ul>
+                                    <li><strong>Black:</strong><br>
+                                        The most dominant color in the dataset, with more than <strong>120
+                                            products</strong>. This indicates a strong preference for black-colored
+                                        products in the inventory.
+                                    </li>
+
+                                    <li><strong>Red:</strong><br>
+                                        The second most frequent color, with around <strong>60 products</strong>. Red
+                                        also appears to be a popular choice among products.
+                                    </li>
+
+                                    <li><strong>Silver and No Color:</strong><br>
+                                        Both categories show moderate product counts, ranging from <strong>40 to 50
+                                            products</strong> each.
+                                        The <code>No color</code> category likely represents products without specified
+                                        color data or those with neutral appearance.
+                                    </li>
+
+                                    <li><strong>Blue, Yellow, and Multi:</strong><br>
+                                        These colors fall into the mid-range with <strong>20–40 products</strong> each,
+                                        showing moderate demand or stock levels.
+                                    </li>
+
+                                    <li><strong>Grey, Silver/Black, and White:</strong><br>
+                                        These are the least represented colors, each with fewer than <strong>20
+                                            products</strong>, suggesting either low demand or specialized/niche items.
+                                    </li>
+                                </ul>
+
+                                <hr>
+                                <br><br>
+
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ <strong>Focus on Black and Red:</strong> Given their high counts, these colors
+                                        may represent high-demand products. Consider aligning future inventory planning
+                                        accordingly.</li>
+                                    <li>✅ <strong>Review No Color category:</strong> Investigate if products in this
+                                        category are missing color data that should be filled in for accurate reporting.
+                                    </li>
+                                    <li>✅ <strong>Target Low-stock Colors:</strong> For categories like
+                                        <code>Multi</code>, <code>Silver/Black</code>, and <code>White</code>, assess
+                                        whether low stock is intentional (e.g., seasonal or specialty items) or if there
+                                        is an unmet demand.
+                                    </li>
+                                    <li>✅ <strong>Further Analysis:</strong> Consider cross-referencing this color
+                                        distribution with sales performance to identify the most profitable colors.</li>
+                                </ul>
+
+                                <hr>
+                            </div>
+
+                        </div>
+                        <!-- END project - 6  -->
+
+                        <!-- START project - 7  -->
+                        <div class="abh-section-title">
+                            <br><br>
+                            <h2>📊 7. Weght Distribution by Class</h2>
+                            <br>
+                            <img src="../img/portfolio/project-7.png" alt="Python Data Analysis Visualization"
+                                class="img-fluid">
+                            <div class="text-left">
+
+                                <h4>🧠 What this graph shows:</h4>
+                                <p>This box plot displays the distribution of product weights across different Class
+                                    categories.</p>
+                                <ul>
+                                    <li><strong>X-axis:</strong> Product Class (H, L, M, No class).</li>
+                                    <li><strong>Y-axis:</strong> Product weight (in relevant units).</li>
+                                </ul>
+                                <hr>
+
+                                <h4>📌 Insights &amp; Observations:</h4>
+                                <ul>
+                                    <li><strong>Weight Variability:</strong><br>
+                                        All classes show a wide range of weights, with noticeable outliers above 200
+                                        units, especially in H, L, and
+                                        M categories.</li>
+
+                                    <li><strong>Typical Weight Range:</strong><br>
+                                        Most products in all classes have weights concentrated below 50 units, as
+                                        indicated by the size of the boxes
+                                        (interquartile range).</li>
+
+                                    <li><strong>Outliers:</strong><br>
+                                        Each class contains several significant outliers, with some weights exceeding
+                                        600–1000 units, likely
+                                        representing large or special items.</li>
+
+                                    <li><strong>No Class:</strong><br>
+                                        Products without a defined class (No class) also have a small but consistent
+                                        weight distribution, with a few
+                                        outliers.</li>
+                                </ul>
+                                <hr>
+
+                                <h4>📌 Recommendations:</h4>
+                                <ul>
+                                    <li>✅ <strong>Review extreme outliers</strong> to ensure data accuracy and check for
+                                        potential data entry
+                                        errors.</li>
+
+                                    <li>✅ <strong>Consider analyzing</strong> how weight relates to pricing, shipping
+                                        costs, or sales performance.
+                                    </li>
+
+                                    <li>✅ <strong>Investigate the No class category</strong> for possible data
+                                        enrichment.</li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+                        <!-- END project - 7  -->
                     </div>
                 </div>
 
+                 <!-- Final Recommendations -->
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="abh-section-title">
+                            <h2>📌 Final Recommendations for Stakeholders</h2>
+                        
+                            <p>Based on the analysis of all seven visualizations, several key actions are recommended to help improve
+                                profitability, data quality, and decision-making across the product portfolio:</p>
+                            <br><br>
+                            <h4>1. Optimize Sales and Marketing Strategies:</h4>
+                            <ul>
+                                <li>Focus on <strong>high-margin and high-demand categories</strong> such as <strong>Mountain Bikes</strong>,
+                                    <strong>Road Frames</strong>, and popular <strong>color and style segments</strong> (e.g.,
+                                    <strong>Black</strong>, <strong>Red</strong>, <strong>Unisex</strong>).</li>
+                                <li>Consider <strong>targeted promotions</strong> or <strong>inventory expansion</strong> for these profitable
+                                    segments.</li>
+                            </ul>
+                            <br><br>
+                            <h4>2. Address Low-Margin and Negative-Margin Products:</h4>
+                            <ul>
+                                <li>Conduct a detailed <strong>review of low or negative margin categories</strong> (e.g.,
+                                    <strong>Gloves</strong>, <strong>Socks</strong>, <strong>Touring Bikes</strong>, <strong>Bottom
+                                        Brackets</strong>, <strong>Caps</strong>, and certain <strong>Product Lines like R, S, and T</strong>).
+                                </li>
+                                <li><strong>Adjust pricing</strong>, <strong>production costs</strong>, or <strong>promotional
+                                        strategies</strong> where necessary.</li>
+                            </ul>
+                            <br><br>
+                            <h4>3. Improve Data Quality and Completeness:</h4>
+                            <ul>
+                                <li><strong>Investigate and update missing information</strong> in key fields like <strong>Product
+                                        Class</strong>, <strong>Product Line</strong>, <strong>Style</strong>, and <strong>Color</strong>.</li>
+                                <li>Reducing the number of products categorized as <strong>‘Unknown’</strong> or <strong>‘No Class/No Line/No
+                                        Color’</strong> will improve the accuracy of future analysis and reporting.</li>
+                            </ul>
+                            <br><br>
+                            <h4>4. Analyze Outliers and Data Anomalies:</h4>
+                            <ul>
+                                <li><strong>Review extreme outliers</strong> in metrics like <strong>Profit Margin</strong> and
+                                    <strong>Weight</strong> to ensure there are no data entry errors.</li>
+                                <li>Understand if these outliers represent <strong>special products</strong>, <strong>one-off
+                                        promotions</strong>, or <strong>genuine business cases</strong> that require separate analysis.</li>
+                            </ul>
+                            <br><br>
+                            <h4>5. Refine Inventory and Production Planning:</h4>
+                            <ul>
+                                <li>Use insights from <strong>Size</strong>, <strong>Style</strong>, <strong>Color</strong>, and <strong>Class
+                                        distributions</strong> to align <strong>production and inventory</strong> with actual market demand.
+                                </li>
+                                <li>Focus manufacturing on <strong>popular sizes</strong>, <strong>best-selling colors</strong>, and
+                                    <strong>in-demand styles</strong> while reviewing <strong>underperforming segments</strong> for potential
+                                    rationalization.</li>
+                            </ul>
+                        
+                            <br><br>
+                            <h4>6. Explore Cross-Segment Opportunities:</h4>
+                            <ul>
+                                <li>Conduct further analysis to identify <strong>profitable combinations of Class, Size, Style, and
+                                        Color</strong>.</li>
+                                <li>This can help <strong>tailor marketing campaigns</strong>, <strong>develop targeted product
+                                        bundles</strong>, and <strong>improve customer segmentation</strong>.</li>
+                            </ul>
+                        
+                            <br><br>
+                            <h4>7. Link Data Insights to Business Outcomes:</h4>
+                            <ul>
+                                <li>Integrate these findings with <strong>sales performance</strong>, <strong>customer preferences</strong>, and
+                                    <strong>operational costs</strong> to build a <strong>data-driven approach to product lifecycle
+                                        management</strong>.</li>
+                                <li><strong>Regularly update and review product data</strong> to support <strong>dynamic pricing</strong>,
+                                    <strong>inventory management</strong>, and <strong>strategic planning</strong>.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
 
